@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    const element = document.getElementById("nonExistentDiv");
+    if (element) {
+      element.innerHTML = "This text should not be visible";
+    } else {
+      console.warn("Element with id 'nonExistentDiv' not found.");
+      // Handle the error gracefully, perhaps by displaying a default message or
+      // taking other corrective actions.
+    }
+  </script>
+</body>
+</html>
